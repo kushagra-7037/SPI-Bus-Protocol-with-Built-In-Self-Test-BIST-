@@ -1,5 +1,4 @@
 // include guard, stops this file getting compiled twice
-// if it ends up listed in the fileset AND `include-d somewhere
 `ifndef SPI_BASE_TEST_SV
 `define SPI_BASE_TEST_SV
 
