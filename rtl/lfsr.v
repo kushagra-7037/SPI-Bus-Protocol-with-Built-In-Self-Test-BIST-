@@ -15,19 +15,6 @@ module lfsr
    output wire [DATA_WIDTH-1:0] lfsr_data //current pseudo random value
     );
     
- /*
-      NOTE ON PARAMETERIZATION:
-        The feedback tap positions {7,5,4,3} below are specific to
-        the 8-bit maximal-length polynomial x^8+x^6+x^5+x^4+1.
-        If DATA_WIDTH is changed from 8, the tap positions in
-        SECTION 2 MUST be updated to a maximal-length polynomial
-        for the new width, otherwise the LFSR will NOT be
-        maximal-length (shorter period, possible additional
-        zero-lock states). DATA_WIDTH is kept as a parameter for
-        documentation/reuse purposes but this project always
-        instantiates it at the fixed value of 8.
-    */
-  //internal reg  
   //declare a shift register
   reg [DATA_WIDTH-1:0] shift_reg;
   //always make lfsr data equal to shift reg data
