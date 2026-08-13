@@ -87,11 +87,7 @@ module bist_ctrl
               misr_rst       <= 1'b0;       
               
      case(state) 
-     //  All outputs safe/deasserted.
-    //  err_code is NOT cleared here - it is preserved so
-   // the host can read it from STATUS_REG after a FAIL.
-  //  err_code is cleared at S_CONFIG (next BIST start).
- //  Wait for a 1-cycle bist_start pulse from regfile.
+    
      S_IDLE: begin
 //IDLE    - Wait for bist_start pulse from register file  
                  bist_busy   <= 1'b0;
